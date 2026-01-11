@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container dashboard-container">
+
+    <h2 style="text-align:center;">Admin Dashboard</h2>
+
+    <p><strong>Total Feedback:</strong> {{ total }}</p>
+    <p><strong>Average Rating:</strong> {{ avg }}</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Rating</th>
+                <th>Comments</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for f in feedback %}
+            <tr>
+                <td>{{ f.name }}</td>
+                <td>{{ f.email }}</td>
+                <td>{{ f.rating }}</td>
+                <td>{{ f.comments }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- CENTERED SMALL LOGOUT BUTTON -->
+    <div style="display:flex; justify-content:center; margin-top:25px;">
+        <a href="/logout">
+            <button style="
+                width: 120px;
+                padding: 6px;
+                font-size: 14px;
+            ">
+                Logout
+            </button>
+        </a>
+    </div>
+
+</div>
+{% endblock %}

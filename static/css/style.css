@@ -1,0 +1,165 @@
+/* ---------- RESET ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------- BODY ---------- */
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    padding: 40px;
+}
+
+/* ---------- COMMON CONTAINER ---------- */
+.container {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+}
+
+/* ---------- CENTER PAGE (LOGIN) ---------- */
+.center-page {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ---------- INDEX SPLIT LAYOUT ---------- */
+.split-layout {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    gap: 25px;
+}
+
+/* LEFT PANEL (ADMIN) */
+.left-panel {
+    flex: 1;
+    background: linear-gradient(135deg, #667eea, #5a67d8);
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.left-panel h2 {
+    margin-bottom: 10px;
+}
+
+.left-panel p {
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+/* ADMIN BUTTON FIX */
+.admin-btn {
+    background: #ffffff;
+    color: #5a67d8;
+    font-weight: bold;
+}
+
+.admin-btn:hover {
+    background: #f1f1f1;
+    color: #5a67d8;
+}
+
+/* RIGHT PANEL */
+.right-panel {
+    flex: 1;
+    padding: 20px;
+}
+
+.right-panel h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* ---------- INPUTS ---------- */
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+textarea {
+    resize: none;
+}
+
+/* ---------- BUTTONS ---------- */
+button {
+    width: 100%;
+    padding: 10px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #5a67d8;
+}
+
+/* ---------- LOGIN BOX ---------- */
+.login-box {
+    width: 100%;
+    max-width: 360px;
+}
+
+/* ---------- DASHBOARD ---------- */
+.dashboard-container {
+    width: 95%;
+    min-height: 85vh;
+}
+
+/* ---------- TABLE ---------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+thead {
+    background: #667eea;
+    color: white;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+tbody tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+/* ---------- ERROR ---------- */
+.error {
+    color: red;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+    .split-layout {
+        flex-direction: column;
+    }
+}

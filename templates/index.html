@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container split-layout">
+
+    <!-- LEFT: ADMIN LOGIN -->
+    <div class="left-panel">
+        <h2>Admin Panel</h2>
+        <p>Login to view feedback dashboard</p>
+
+        <a href="/admin-login">
+            <button class="admin-btn">Admin Login</button>
+        </a>
+    </div>
+
+    <!-- RIGHT: FEEDBACK FORM -->
+    <div class="right-panel">
+        <h2>Submit Feedback</h2>
+
+        <form method="POST" action="/submit-feedback">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+
+            <select name="rating" required>
+                <option value="">Select Rating</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+
+            <textarea name="comments" placeholder="Your Comments"></textarea>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+
+</div>
+{% endblock %}
