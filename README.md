@@ -96,6 +96,8 @@ Admin Login:
 Admin Dashboard (after login):
 👉 http://127.0.0.1:5000/admin-dashboard
 
+On web it is live -> (Render)
+👉 https://onlinefeedbackcollector.onrender.com
 
 ## 📂 Project Structure
 
